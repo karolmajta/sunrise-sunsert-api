@@ -7,7 +7,6 @@ module.exports = function getSunsriseSunsetData(params) {
   var formatted = params.formatted || 0;
 
   var url = 'https://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng + '&date=' + date + '&formatted=' + formatted;
-console.log(url);
 
   return fetch(url)
     .then(function(r) { return r.json(); });
